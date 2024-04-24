@@ -1,4 +1,4 @@
- #The Serendipist - Website
+ # The Serendipist - Website
  
  This repo hosts my personal website, which leverages Jekyll and Netlify to serve this static website.
 
