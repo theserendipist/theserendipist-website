@@ -1,20 +1,61 @@
- # The Serendipist - Website
- 
- This repo hosts my personal website, which leverages Jekyll and Netlify to serve this static website.
+# Klisé
 
- I am an aspiring neuroscientist and researcher, and I am also dwelwing into data analysis. 
- Since I am not a web developer and I have minimal technical skills, I decided to invest just enough time to have a setup that is:
+Klisé is minimalist Jekyll theme for running a personal site and blog running on Jekyll.<br>
+For demo <a href="https://klise.now.sh" target="_blank" rel="noopener">klise.now.sh</a>
 
- - relatively cheap,
- - can be maintained fairly easily,
- - has the necessary desired features (a landing page, a blog, a portfolio and an about section), 
- - can be deployed in a short time.
+## Features
 
- This is how I have found out about Jekyll, GitHub Pages, Netlify and Cloudflare.
+- [x] Light & Dark Mode support :waxing_crescent_moon:
+- [x] Customizable (using `.scss`)
+- [x] Responsive (desktop, tab and mobile)
+- [x] Mobile First Design
+- [x] SEO Optimized
+- [x] Images of post Organized ([`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles))
+- [x] Generate Sitemap ([`jekyll-sitemap`](https://github.com/jekyll/jekyll-sitemap))
+- [x] RSS Feed ([`jekyll-feed`](https://github.com/jekyll/jekyll-feed))
+- [x] Syntax Highlighter ([`rouge`](https://github.com/rouge-ruby/rouge))
+- [x] Next & Previous Post
+- [x] Comment layout, enable in frontmatter if you wish
+- [x] Google analytics
+- [x] HTML Minify ([`jekyll-compress-html`](https://github.com/penibelst/jekyll-compress-html))
+- [x] W3C **Validated**
+- [x] Lighthouse and PageSpeed **Passed**
 
- I based the process on multiple different tutorials and templates. Here are some of the most useful ones (in no particular order):
- - [Get started with Jekyll, GitHub, and Netlify](https://tseknet.com/blog/startblogging) by Dan Tsekhanskiy,
- - [Jekyll Serif Theme](https://www.zerostatic.io/theme/jekyll-serif/) by Zerostatic Themes,
- - and some (a lot of) YouTube tutorials.
+![Lighthouse Result](./lighthouse.png)
 
- If you are more interested in the details of this project or my process, feel free to reach out to me at adam@theserendipist.com!
+## Backlogs
+
+- [ ] Intergrated with PhotoSwipe.
+- [ ] Add schema.org meta information.
+- [ ] Transform class selector to BEM metodology.
+
+## Installation
+
+Run local server:
+
+```bash
+$ git clone https://github.com/piharpi/jekyll-klise.git
+$ cd jekyll-klise
+$ bundle install
+$ bundle exec jekyll serve
+```
+
+Navigate to `localhost:4000`. You're Welcome, Fork and be Stargazer.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piharpi/jekyll-klise) [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/piharpi/jekyll-klise) [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=javascript-0000-jopapa#create/Microsoft.StaticApp)
+
+## Limitation
+
+- Since [`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles#compatibility) plugin isn't supported by github pages, this cause will make your site problems, path broken or post images won't show up, you can host alternatively using likes [netlify.com](https://netlify.com), [vercel.com](https://vercel.com), [azure.com](https://docs.microsoft.com/azure/static-web-apps/publish-jekyll) or [surge.sh](https://surge.sh) services, which support 3rd party.
+
+## Contributing
+
+If you see any typos or formatting errors in a post, or want to helping reduce backlogs or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!, please read [contributing](./CONTRIBUTING.md) before PR.
+
+Yeaaa feel free to open a pull request.
+## Support
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W7MJ4X) [![saweria.co](./assets/img/saweria-button.png)](https://saweria.co/piharpi)
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

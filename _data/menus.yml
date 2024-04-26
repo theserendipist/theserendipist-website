@@ -1,21 +1,20 @@
-main:
-  - name: "Services"
-    url: "/services/"
-    weight: 2
-  - name: "Team"
-    url: "/team/"
-    weight: 3
-  - name: "About"
-    url: "/about/"
-    weight: 4
-  - name: "Contact"
-    url: "/contact/"
-    weight: 5
+- title: Home
+  url: /
+  external: false
 
-footer:
-  - name: "Home"
-    url: "/"
-    weight: 1
-  - name: "Contact"
-    url: "/contact/"
-    weight: 2
+- title: Portfolio
+  url: /portfolio/
+  external: false
+
+- title: Archive
+  url: /archive/
+  external: false
+
+- title: About
+  url: /about/
+  external: false # set true if you using external link, see below
+
+# Example:
+# - title: github
+#   url: https://github.com/piharpi/jekyll-klise
+#   external: true

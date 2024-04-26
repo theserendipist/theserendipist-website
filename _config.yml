@@ -1,51 +1,91 @@
-baseurl: '/'
-permalink: pretty
-title: 'Jekyll Serif'
+# Site settings
+title: The Serendipist # site title
+description: >- # site description
+  The Serendipist is a personal blog and portfolio, where I write about things that intrique me and showcase my work and my projects.
+lang: en-UK # default lang
+timezone: Europe/Budapest # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
+mode: dark # default theme "dark" | "light"
 
-logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+# Profile settings
+author:
+  name: Ádám Takács # author name
+  nickname: The Serendipist #author nickname
+  bio: >- # tell to the world
+    Welcome to my personal blog and portfolio, where I write about things that intrique me and showcase my work and my projects.
+  username: theserendipist # general username
+  github: theserendipist # github username
+  twitter: twitter_username # twitter username
+  facebook: facebook_username # facebook username
+  email: adam@theserendipist.com # email adress
+  avatar: /assets/img/logo-small.png # change with your own avatar
 
-home: 
-  limit_services: 6
+# URL settings
+url: "https://theserendipist.com" #
+baseurl:
+permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
 
+# Collection setting
 collections:
-  services:
-    output: true
-    sort_by: weight
-  team:
+  posts:
     output: true
 
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
 defaults:
   - scope:
       path: ""
-      type: "services"
     values:
-      layout: "service"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
+      layout: post
+      comments: false
 
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+# theme: klise
 sass:
-  style: compressed # possible values: nested expanded compact compressed
+  style: compressed
 
-plugins:
-  - jekyll-environment-variables
+include:
+  - _redirects
+  - .htaccess
 
 exclude:
+  - CNAME
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - LICENSE.md
   - LICENSE
+  - CHANGELOG.md
   - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
